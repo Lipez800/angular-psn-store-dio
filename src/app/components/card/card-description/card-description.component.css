@@ -1,0 +1,21 @@
+.card-description__container {
+	width: 100%;
+	color: black;
+}
+
+.card-description__type {
+	font-size: .8rem;
+	text-decoration: none;
+}
+
+.card-description__title {
+	color: var(--c-primary);
+}
+
+.card-ReleaseDate__type {
+	font-size: 0.8rem;
+	color: var(--c-secondary);
+	text-decoration: none;
+	margin-left: 0; 
+}
+

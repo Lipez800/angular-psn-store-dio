@@ -1,0 +1,12 @@
+<a href="#" class="card__container">
+	<img class="card__img" [src]=[gameCover] alt="" srcset="">
+	<div class="card__content">
+		<app-card-label gameLabel="{{gameLabel}}">
+		</app-card-label>
+		<app-card-description gameTitle="{{gameTitle}}" gameType="{{gameType}}" [gameReleaseDate]="gameReleaseDate">
+			<p>Data de lançamento: {{gameReleaseDate}}</p>
+		</app-card-description>
+		<app-card-pricing gamePlatformTag="{{gamePlatformTag}}" gamePrice="{{gamePrice}}">
+		</app-card-pricing>
+	</div>
+</a>

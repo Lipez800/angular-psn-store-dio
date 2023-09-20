@@ -1,0 +1,58 @@
+<section class="home__container">
+	<h1 id="prevenda">Pré-venda</h1>
+	<div class="home__games">
+		<app-card *ngFor="let newgame of listNewGames" [gameCover]="'assets/cover/'+newgame.gameCover" [gameLabel]="newgame.gameLabel" [gameType]="newgame.gameType" [gamePrice]="newgame.gamePrice" [gameTitle]="newgame.gameTitle" [gamePlatformTag]="newgame.gamePlatformTag" [gameReleaseDate]="newgame.gameReleaseDate" (click)="abrirModal(newgame)">
+		</app-card>
+	</div>
+</section>
+<section class="home__container">
+	<h1 id="novosjogos">Novos jogos</h1>
+	<div class="home__games">
+		<app-card *ngFor="let newgame of listNewGames" [gameCover]="'assets/cover/'+newgame.gameCover" [gameLabel]="newgame.gameLabel" [gameType]="newgame.gameType" [gamePrice]="newgame.gamePrice" [gameTitle]="newgame.gameTitle" [gamePlatformTag]="newgame.gamePlatformTag" [gameReleaseDate]="newgame.gameReleaseDate" (click)="abrirModal(newgame)">
+		</app-card>
+	</div>
+</section>
+<section class="home__container">
+	<h1 id="demonstracoes">Demonstrações</h1>
+	<div class="home__games">
+		<app-card *ngFor="let demo of listDemos" [gameCover]="'assets/cover/'+demo.gameCover" [gameLabel]="demo.gameLabel" [gameType]="demo.gameType" [gamePrice]="demo.gamePrice" [gameTitle]="demo.gameTitle" [gamePlatformTag]="demo.gamePlatformTag" [gameReleaseDate]="demo.gameReleaseDate" (click)="abrirModal(demo)">
+		</app-card>
+	</div>
+</section>
+<!-- Janela modal -->
+<div class="modal" *ngIf="modalAberta">
+	<div class="menu-bar__container">
+		<div class="menu-bar__content">
+			<div class="menu-bar__logo">
+				<img src="assets/ps-logo.png" alt="playstation logo" srcset="" width="140px" height="32px">
+			</div>
+			<div class="menu-bar__item">
+				<ul>
+					<li><a href="#">YOUTUBE</a></li>
+					<li><a href="https://www.linkedin.com/in/luisgomesp/">LINKEDIN</a></li>
+					<li><a href="https://github.com/Lipez800">GITHUB</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu-bar__section">
+			<ul>
+				<li><a (click)="fecharModal()">VOLTAR A LISTA DE JOGOS </a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="modal-content">
+		<div class="modal-details">
+			<img class="modal-imagem" [src]="idSelecionada.gameZoom" alt="{{ idSelecionada.gameZoom }}" />
+			<h2>{{ idSelecionada.gameTitle }}</h2>
+			<p style="color: black;">{{ idSelecionada.descricao }}Desenvolver Futuramente</p> <!-- Adicione a descrição aqui -->
+			<!-- Outras informações da ID aqui -->
+		</div>
+	</div>
+</div>
+<section class="home__banner">
+	<img src="assets/bane.jpg" alt="" srcset="">\
+</section>
+<section class="home__container">
+	<app-product-option [listOptions]="listOptions"></app-product-option>
+</section>
+<app-footer></app-footer>

@@ -1,0 +1,98 @@
+.home__container {
+	width: 90%;
+	margin: auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: baseline;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	flex-direction: column;
+}
+
+.home__container>h1 {
+	padding-top: 8rem;
+}
+
+.home__games {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.home__banner>img {
+	width: 100%;
+	padding: 2rem 0;
+}
+
+.menu-bar__container {
+  display: flex;
+  z-index: 999;
+  background-color: #ffffff;
+  position: fixed;
+  width: 100%;
+  padding: 1rem 2.5rem;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+  flex-direction: column;
+  top: 0; /* Fixa o menu bar no topo da página */
+  left: 0; /* Alinha o menu bar à esquerda da página */
+}
+
+.menu-bar__content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.menu-bar__logo {
+	display: flex;
+	align-items: center;
+}
+
+.menu-bar__section>ul {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	flex-wrap: wrap;
+}
+
+.menu-bar__section>ul>li {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.menu-bar__item {
+	display: flex;
+	align-items: center;
+}
+
+.menu-bar__item>ul {
+	display: flex;
+	list-style-type: none;
+}
+
+.menu-bar__item>ul>li {
+	padding: 5px;
+	margin-right: 15px;
+}
+
+.menu-bar__item>ul>li>a {
+	text-decoration: none;
+	color: var(--c-primary);
+}
+
+.menu-bar__item>ul>li>a:hover {
+	color: var(--bg-5);
+	font-weight: 600;
+}
+
+.menu-bar__section>ul>li>a {
+	text-decoration: none;
+	color: var(--c-primary);
+}
+
+.menu-bar__section>ul>li>a:hover {
+	color: var(--bg-5);
+	font-weight: 600;
+}
